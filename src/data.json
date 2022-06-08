@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Rice",
+    "imageUrl": "https://i.ibb.co/HNMSMdG/1.jpg",
+    "price": 12
+  },
+  {
+    "id": 2,
+    "name": "Polao",
+    "imageUrl": "https://i.ibb.co/bLPqrHV/polao.webp",
+    "price": 13
+  },
+  {
+    "id": 3,
+    "name": "Khichuri",
+    "imageUrl": "https://i.ibb.co/SyTyX9G/khichuri.jpg",
+    "price": 11
+  },
+  {
+    "id": 4,
+    "name": "Basmati Rice",
+    "imageUrl": "https://i.ibb.co/7ChTtKw/basmati.webp",
+    "price": 12
+  },
+  {
+    "id": 5,
+    "name": "Fried Rice",
+    "imageUrl": "https://i.ibb.co/WvCmTys/fried-rice.webp",
+    "price": 15
+  },
+  {
+    "id": 6,
+    "name": "Mixed Rice",
+    "imageUrl": "https://i.ibb.co/SKrbZxZ/mixed.jpg",
+    "price": 13
+  }
+  
+]
+ 
