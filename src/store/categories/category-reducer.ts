@@ -19,7 +19,7 @@ export const CATEGORIES_INITAL_STATE: CategoriesState = {
 }
 
 
-export const categoriesReducer = ( state= CATEGORIES_INITAL_STATE, action = {} as AnyAction): CategoriesState => {
+export const categoriesReducer = ( state= CATEGORIES_INITAL_STATE, action: AnyAction): CategoriesState => {
     if(fetchCategoriesStart.match(action)){
         return{ ...state, isLoading: true};
     }
@@ -41,4 +41,4 @@ export const categoriesReducer = ( state= CATEGORIES_INITAL_STATE, action = {} a
     }
     return state;
     }
-};
+;
