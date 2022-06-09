@@ -24,7 +24,7 @@ const Dropdown = () =>{
             <div className="items">
                 {cartItems.map((item) => (<FoodItem key = {item.id} cartItem={item}/>))}
             </div>
-            <Button buttonType='inverted' onClick ={CheckoutHandler}> CHECKOUT</Button>
+            <Button onClick ={CheckoutHandler}> CHECKOUT</Button>
         </div>
     )
 

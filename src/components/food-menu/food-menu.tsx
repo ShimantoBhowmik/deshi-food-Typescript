@@ -1,8 +1,18 @@
-import CategoryItem from '../category-item/category-item';
+import { Key } from 'react';
 
+import CategoryItem from '../category-item/category-item';
 import './food-menu.scss';
 
-const foods = [
+
+export type FoodCategory = {
+  id: Key;
+  title: string;
+  imageUrl: string;
+  route: string;
+};
+
+
+const foods: FoodCategory[] = [
     {
       id: 1,
       title: 'Rice',

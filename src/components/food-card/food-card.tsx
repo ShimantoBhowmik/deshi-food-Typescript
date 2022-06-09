@@ -1,15 +1,21 @@
+import {FC} from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import { addItemToCart } from '../../store/cart/cart-action';
 import { selectCartItems  } from '../../store/cart/cart-selector';
-import Button from '../button/button';
+import Button, {BUTTON_TYPE_CLASSES} from '../button/button';
 
-
+import { CategoryItem } from '../../store/categories/category-types';
 
 import './food-card.scss';
 
+type FoodCardProps = {
+    food: CategoryItem;
+  };
 
-const FoodCard = ({ food }) =>{
+
+const FoodCard: FC<FoodCardProps> = ({ food }) =>{
 
     const{name, price, imageUrl} = food;
 
@@ -25,7 +31,7 @@ const FoodCard = ({ food }) =>{
             <span className="name">{name}</span>
             <span className="cost">{price}</span>
         </div>
-        <Button buttonType='inverted' onClick = {addFoodToCart} > Add to cart</Button>
+        <Button buttonType={BUTTON_TYPE_CLASSES.inverted} onClick = {addFoodToCart} > Add to cart</Button>
     </div>)
 }
 
