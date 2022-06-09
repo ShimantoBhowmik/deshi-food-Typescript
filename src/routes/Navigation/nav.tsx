@@ -7,18 +7,18 @@ import Dropdown from '../../components/shopping-cart-dropdown/dropdown';
 import {ReactComponent as Logo} from '../../assets/logo.svg'
 
 import { selectIsCartOpen } from '../../store/cart/cart-selector';
-// import { CartContext } from '../../contexts/shopping-context';
-import { signOutUser } from '../../utils/firebase/firebase';
+import { selectCurrUser } from '../../store/user/user-selector';
+import { signOutStart } from '../../store/user/user-action';
+
+import { useDispatch } from 'react-redux';
 
 import './nav.scss';
 
 const Nav = () => {
-
-  const currUser = useSelector((state) => state.user.currUser); 
-    // const { currUser } = useContext(UserContext);
-  // const{ isCartOpen } = useContext(CartContext);
+  const dispatch = useDispatch();
+  const currUser = useSelector(selectCurrUser);
   const isCartOpen = useSelector(selectIsCartOpen);
-
+  const signOutUser = () => dispatch(signOutStart());
 
   return (
     <Fragment>
