@@ -23,7 +23,7 @@ export const cartReducer = (state = CART_INITIAL_STATE, action: AnyAction): Cart
     if(setIsCartOpen.match(action)){
         return {
                 ...state,
-                isCartOpen: action. payload,
+                isCartOpen: action.payload,
             };
     }
 

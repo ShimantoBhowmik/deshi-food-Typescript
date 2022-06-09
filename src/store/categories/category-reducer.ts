@@ -2,7 +2,7 @@ import { AnyAction } from "redux";
 
 import {  Category } from "./category-types";
 
-import {  fetchCategoriesStart, fetchCategoriesSuccess, FetchCategoriesFail, fetchCategoriesFail } from "./category-action";
+import {  fetchCategoriesStart, fetchCategoriesSuccess, fetchCategoriesFail } from "./category-action";
 
 
 

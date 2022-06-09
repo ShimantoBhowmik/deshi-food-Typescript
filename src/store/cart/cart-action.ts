@@ -1,8 +1,8 @@
 import { CategoryItem } from '../categories/category-types';
 
 import { CART_ACTIONS, CartItem } from "./cart-types";
-import { createAction, withMatcher, Action, ActionWithPayload } from "../../utils/reducer/reducer";
-import { ACTION_TYPES } from '../user/user-types';
+import { createAction, withMatcher, ActionWithPayload } from "../../utils/reducer/reducer";
+
 
 
 const addCartItem = (cartItems: CartItem[], foodToAdd : CategoryItem): CartItem[] =>{
