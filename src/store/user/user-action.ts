@@ -1,18 +1,13 @@
+import {createAction,withMatcher,Action,ActionWithPayload} from '../../utils/reducer/reducer';
 
+import {UserData,AddInfo,} from '../../utils/firebase/firebase';
 
 import { User } from 'firebase/auth'
 import { ACTION_TYPES } from './user-types';;
 
-import {
-    createAction,
-    withMatcher,
-    Action,
-    ActionWithPayload,
-  } from '../../utils/reducer/reducer';
-  import {
-    UserData,
-    AddInfo,
-  } from '../../utils/firebase/firebase';
+
+  
+
 
 // export const setCurrUser = (user) => {
 //     return createAction(ACTION_TYPES.SET_CURRENT_USER,  user);

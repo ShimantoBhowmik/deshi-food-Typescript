@@ -13,17 +13,17 @@ import {
 
 import {
   getCurrentUser,
-  createUserDocumentFromAuth,
+  createUserDoc,
   signInWithGooglePopup,
-  signInAuthUserWithEmailAndPassword,
-  createAuthUserWithEmailAndPassword,
+  signInUserEmailPassword,
+  createUserEmailPassword,
   signOutUser,
 } from '../../utils/firebase/firebase';
-
+  
 export function* getSnapshotFromUserAuth(userAuth, additionalDetails) {
   try {
     const userSnapshot = yield call(
-      createUserDocumentFromAuth,
+      createUserDoc,
       userAuth,
       additionalDetails
     );
@@ -45,7 +45,7 @@ export function* signInWithGoogle() {
 export function* signInWithEmail({ payload: { email, password } }) {
   try {
     const { user } = yield call(
-      signInAuthUserWithEmailAndPassword,
+      signInUserEmailPassword,
       email,
       password
     );
@@ -68,7 +68,7 @@ export function* isUserAuthenticated() {
 export function* signUp({ payload: { email, password, displayName } }) {
   try {
     const { user } = yield call(
-      createAuthUserWithEmailAndPassword,
+      createUserEmailPassword,
       email,
       password
     );

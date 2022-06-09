@@ -1,9 +1,9 @@
-import { userReducer } from "./user/user";
-
 
 import { combineReducers } from "redux";
 import { categoriesReducer } from "./categories/category-reducer";
 import { cartReducer } from "./cart/cart-reducer";
+
+import { userReducer } from "./user/user-reducer";
 
 
 

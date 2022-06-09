@@ -6,25 +6,17 @@ import SignIn from './routes/sign-in/sign-in';
 import CheckOutPage from './routes/checkoutPage/checkoutPage';
 import Shop from './routes/shop/shop';
 import {  useEffect } from "react";
-import { setCurrUser } from './store/user/user-action';
-import { Listener,createUserDoc } from "./utils/firebase/firebase";
+import { checkUserSession } from './store/user/user-action';
+
 
 
 const App = () => {
   const dispatch = useDispatch();
 
+
   useEffect(() => {
-        const stopListening = Listener((user) =>{
-            if(user){
-                createUserDoc(user); 
-            }
-
-
-            dispatch(setCurrUser(user));
-        }, [dispatch]);
-
-        return stopListening;
-    });
+    dispatch(checkUserSession());
+  }, []);
 
 
   return (
