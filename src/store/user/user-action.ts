@@ -6,12 +6,6 @@ import { User } from 'firebase/auth'
 import { ACTION_TYPES } from './user-types';;
 
 
-  
-
-
-// export const setCurrUser = (user) => {
-//     return createAction(ACTION_TYPES.SET_CURRENT_USER,  user);
-//     }
 
 
     export type CheckUserSession = Action<ACTION_TYPES.CHECK_USER_SESSION>;
