@@ -1,8 +1,9 @@
+import { useCallback } from 'react';
+
+
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-
-import React from 'react';
 
 import Button from '../button/button';
 import FoodItem from '../food-item/food-item';
@@ -15,9 +16,9 @@ const Dropdown = () =>{
     const cartItems = useSelector(selectCartItems);
     const navigate = useNavigate();
 
-    const CheckoutHandler = () => {
+    const CheckoutHandler = useCallback(() => {
         navigate('/checkout');
-    }
+    }, []);
 
     return(
         <div className="dropdown">
