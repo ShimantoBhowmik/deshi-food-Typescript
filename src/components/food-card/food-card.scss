@@ -48,4 +48,17 @@
             width: 10%;
         }
     }
+
+    @media screen and (min-width: 800px){
+        width: 40vw;
+        &:hover {
+            img {
+                opacity: unset;
+            }
+    
+            button {
+                opacity: unset; 
+            }
+        }
+    }
 }

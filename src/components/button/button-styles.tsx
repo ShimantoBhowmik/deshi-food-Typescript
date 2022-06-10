@@ -45,6 +45,12 @@ export const InvertedButton = styled(BaseButton)`
     color: white;
     border: none;
   }
+  @media screen and (max-width: 800px){
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    ppadding: 0 10px 0 10px;
+  }
 `;
 
 export const ButtonSpinner = styled(SpinnerContainer)`

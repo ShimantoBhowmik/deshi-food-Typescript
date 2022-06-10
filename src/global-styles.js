@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
         background-blend-mode: lighten;
 
         @media screen and (max-width: 800px) {
-            padding: 10px;
+            height: 200px;
         }
     }
     
