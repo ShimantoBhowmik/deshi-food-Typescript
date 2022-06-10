@@ -1,3 +1,5 @@
+import { GlobalStyle } from "./global-styles";
+
 import {  useEffect, lazy, Suspense } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -22,6 +24,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<Spinner/>}>
+      <GlobalStyle/>
       <Routes>
         <Route path='/' element={<Nav />}>
           <Route index={true} element={<HomePage />} />
